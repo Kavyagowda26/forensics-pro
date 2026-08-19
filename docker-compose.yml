@@ -1,0 +1,16 @@
+﻿services:
+  backend:
+    build: ./backend
+    container_name: forensics-backend
+    ports:
+      - "5000:5000"
+    environment:
+      FLASK_ENV: production
+    restart: always
+
+  frontend:
+    build: ./frontend
+    container_name: forensics-frontend
+    ports:
+      - "3000:80"
+    restart: always

@@ -1,0 +1,1 @@
+{"status": "complete", "risk_level": "CRITICAL", "threat_score": 0.95, "indicators": [{"type": "PE_EXECUTABLE", "severity": "CRITICAL", "description": "Windows PE executable detected", "confidence": 0.95}], "file_hash": "01cfee0ba04a50af...", "total_indicators": 1, "entropy": 5.46, "analysis_method": "RULE_BASED", "ml_enabled": false, "timestamp": "2026-08-20T04:57:02.396634"}

@@ -3,6 +3,6 @@ WORKDIR /app
 COPY requirements.txt .
 RUN pip install -r requirements.txt
 COPY app.py .
-RUN mkdir -p uploads
+RUN mkdir -p /app/uploads /app/queue /app/results /app/database
 EXPOSE 5000
 CMD ["python", "app.py"]

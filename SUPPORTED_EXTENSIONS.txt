@@ -1,0 +1,6 @@
+﻿================================================================================
+FORENSICS PRO 5.0 - COMPLETE FILE EXTENSION SUPPORT
+================================================================================
+
+The system now supports 500+ file extensions across all categories!
+

@@ -4,13 +4,27 @@
     container_name: forensics-backend
     ports:
       - "5000:5000"
-    environment:
-      FLASK_ENV: production
-    restart: always
+    volumes:
+      - ./uploads:/app/uploads
+      - ./queue:/app/queue
+      - ./results:/app/results
+    depends_on:
+      - analyzer
+    restart: unless-stopped
+
+  analyzer:
+    build: ./analyzer
+    container_name: forensics-analyzer
+    volumes:
+      - ./queue:/app/queue
+      - ./results:/app/results
+    restart: unless-stopped
 
   frontend:
     build: ./frontend
     container_name: forensics-frontend
     ports:
       - "3000:80"
-    restart: always
+    depends_on:
+      - backend
+    restart: unless-stopped
